@@ -1,10 +1,10 @@
 import Movie from "../../components/movie";
+import { API_URL } from "../contants";
 
 export const metadata = {
   title: "Movies",
 }
 
-export const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
 async function getMovies() {
   await new Promise((resolve) => setTimeout(resolve, 1000));
