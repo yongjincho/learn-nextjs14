@@ -1,6 +1,6 @@
-import Link from "next/link";
+import Movie from "../../components/movie";
 
-export const metadta = {
+export const metadata = {
   title: "Movies",
 }
 
@@ -18,9 +18,7 @@ export default async function Page() {
   return (
     <div>
       {movies.map((movie) => (
-        <li key={movie.id}>
-          <Link href={`/movies/${movie.id}`}>{movie.title}</Link>
-        </li>
+        <Movie id={movie.id} title={movie.title} poster_path={movie.poster_path} />
       ))}
     </div>
   );
